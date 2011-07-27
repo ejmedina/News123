@@ -1,35 +1,34 @@
 <!doctype html>
+
 <html lang="es">
-<head>
-	<meta charset="utf-8" >
-	<title>News 123 Portal de noticias con Zend Framework</title>
-</head>
-
-<body>
-
-	<header>
-		<hgroup>
-			<h1>Portal de noticias news 123</h1>
-		</hgroup>
-	</header>
+	<head>
+		<title>News123 Portal de noticias</title>
+		<meta charset="utf-8">
+	</head>
 	
-	<nav>
-		<ul>
-			<li><a href="/">Portada</a></li>
-			<li><a href="/categoria/listado/id/1/">Tecnologia</a></li>
-			<li><a href="/categoria/listado/id/2/">Politica</a></li>
-			<li><a href="/rss">Rss</a></li>
-			<li><a href="/noticias/buscador">Buscador</a></li>
-		</ul>
-	</nav>
-	
-	<section>
-		<?php echo $this->layout()->content; ?>
-	</section>
-	
-	<footer>
-		<p>Portal de noticias desarrollado con Zend Framework.</p>
-	</footer>
-</body>
-	
+	<body>
+		<header>
+			<hgroup>
+				<h1>News 123 portal de noticias con Zend Framework</h1>
+			</hgroup>
+		</header>
+		
+		
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/mundo/hola">Hola</a></li>
+				<li><a href="/mundo/chau">Chau</a></li>
+			</ul>
+		</nav>
+		
+		<section>
+			<?php echo $this->layout()->content ?>
+		</section>
+		
+		<footer>
+			<p>Portal de noticias desarrollado con Zend Framework</p>
+		</footer>
+	</body>
 </html>
+
