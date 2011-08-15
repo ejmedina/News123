@@ -1,1 +1,11 @@
-<h1>Portada del diario</h1>
+<h1><?php echo $this->titulo;?></h1>
+
+
+<div>
+	<?php foreach( $this->titulares as $tit ) :?>
+	<article>
+		<?php echo $tit;?>
+	</article>
+	<?php endforeach;?>
+	
+</div>

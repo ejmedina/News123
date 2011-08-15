@@ -10,7 +10,14 @@ class IndexController extends Zend_Controller_Action
 
 	public function indexAction()
 	{
-		// action body
+		$this->view->titulo = 'Portal de noticias news123 - Portada';
+		
+		$this->view->titulares = array(
+			'Boca juega con Union por la segunda fecha',
+			'Velez Gano',
+			'Cristina arraso en las elecciones'
+	
+		);
 	}
 	
 

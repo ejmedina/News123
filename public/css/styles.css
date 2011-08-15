@@ -1,0 +1,21 @@
+body {
+	
+	background-color:grey;
+}
+
+header{
+	margin:auto;
+	width: 800px;
+	
+}
+
+nav {
+	height: 50px;
+	
+}
+nav ul li {
+	
+	float:left;
+	padding-left:10px;
+	list-style: none;
+}
