@@ -3,7 +3,8 @@ body {
 	padding:0px;
 	font-family: 'Comfortaa', cursive;
 	background-color:#fff;
-	color:#ccc;
+	/*color:#ccc;*/
+	color:#000;
 	margin-top:-15px;
 }
 
@@ -50,15 +51,19 @@ nav a:hover{
 	
 }
 
+table tr td {
+    padding:5px;
+    margin-left:30px;
+}
 
 section {
 	margin:0 auto;
 	margin-top:0px;
-	margin-bottom: -50px;
 	width: 1000px;
+	margin-bottom: -50px;
 	padding:20px;
 	
-	background-color:#03658C;
+/*	background-color:#03658C;*/
 	
 }
 

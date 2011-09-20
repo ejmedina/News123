@@ -10,10 +10,23 @@ class Application_Model_Posts extends Zend_Db_Table_Abstract
 	}
 	
 	
-	public function save( $bind )
+	public function save( $bind, $id = null )
 	{
-		$row = $this->createRow();
+	    if( is_null( $id )){
+	        $row = $this->createRow();
+	    }else{
+	        $row = $this->getRow( $id );
+	    }
+	
 		$row->setFromArray( $bind );
 		return $row->save();
+	}
+	
+	public function getRow( $id )
+	{
+	
+	    $id = (int) $id;
+	    $row = $this->find( $id )->current();
+	    return $row;
 	}
 }

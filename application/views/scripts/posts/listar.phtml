@@ -7,17 +7,23 @@
 			<td>Id</td>
 			<td>Titulo</td>
 			<td>Fecha</td>
+			<td></td>
+			<td></td>
 		</tr>
 		
-		<?php if( count( $this->posts )) :?>
-		<?php foreach( $this->posts as $post) :?>
+		<?php if( count( $this->paginator )) :?>
+		
+		<?php foreach( $this->paginator as $post) :?>
 		
 		<tr>
 			<td><?php echo $post->id;?></td>
 			<td><?php echo $post->title;?></td>
 			<td><?php echo $post->created_at;?></td>
+			<td><a href="/posts/update/id/<?php echo $post->id ?>">Editar</td>
+			<td><a href="/posts/delete/id/<?php echo $post->id ?>">Borrar</td>
 		</tr>
 		
+	
 		<?php endforeach;?>
 		<?php else : ?>
 		<tr>
@@ -26,5 +32,9 @@
 		
 		<?php endif;?>
 		
+		
+		<?php if( count( $this->paginator )):?>
+		    <?php echo $this->paginator;?>
+		<?php endif;?>
 	</table>
 </div>
