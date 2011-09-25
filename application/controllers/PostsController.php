@@ -19,6 +19,23 @@ class PostsController extends Zend_Controller_Action
 	
 	}
 	
+	public function verAction()
+	{
+	
+	    if( !$this->_hasParam('id')) {
+	        return $this->_redirect('/');
+	    }
+	    
+	    $posts = new Application_Model_Posts();
+	    $post = $posts->getRow($this->_getParam('id'));
+	    
+	    if( !$post ){
+	    	return $this->_redirect('/');
+	    }
+	
+	    $this->view->post = $post;
+	
+	}
 	
 	public function updateAction()
 	{

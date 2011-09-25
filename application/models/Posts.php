@@ -9,6 +9,14 @@ class Application_Model_Posts extends Zend_Db_Table_Abstract
 		return $this->fetchAll();
 	}
 	
+	public function getAllNew()
+	{
+		return $this->fetchAll(
+			$this->select()
+			->order('created_at DESC')
+			->limit(5)
+		);
+	}	
 	
 	public function save( $bind, $id = null )
 	{
