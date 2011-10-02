@@ -4,6 +4,7 @@ class IndexController extends Zend_Controller_Action
     public function indexAction ()
     {
         
+        /*
         $session = new Zend_Session_Namespace('OAUTH_TWITTER');
          		
         $config = array(
@@ -23,7 +24,7 @@ class IndexController extends Zend_Controller_Action
         $twitterAccount = $twitter->account->verifyCredentials();
         
         print_r($twitterAccount);exit;
-                
+        */        
         
         $this->view->titulo = 'Portal de noticias news123 - Portada';
         $postsModel = new Application_Model_Posts();
