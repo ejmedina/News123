@@ -1,14 +1,14 @@
 <div>
 
-	<a href="/posts/agregar/">Agregar</a>
+	<a href="/posts/agregar/"><button class="btn primary">Agregar</button></a>
 	
 	<table>
 		<tr>
 			<td>Id</td>
 			<td>Titulo</td>
 			<td>Fecha</td>
-			<td></td>
-			<td></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
 		</tr>
 		
 		<?php if( count( $this->paginator )) :?>
@@ -19,8 +19,8 @@
 			<td><?php echo $post->id;?></td>
 			<td><?php echo $post->title;?></td>
 			<td><?php echo $post->created_at;?></td>
-			<td><a href="/posts/update/id/<?php echo $post->id ?>">Editar</td>
-			<td><a href="/posts/delete/id/<?php echo $post->id ?>">Borrar</td>
+			<td align="center"><a href="/posts/update/id/<?php echo $post->id ?>"><button class="btn success">Editar</button></a></td>
+			<td align="center"><a href="/posts/delete/id/<?php echo $post->id ?>"><button class="btn danger">Borrar</button></a></td>
 		</tr>
 		
 	

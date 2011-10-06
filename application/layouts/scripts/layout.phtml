@@ -1,81 +1,84 @@
 <!doctype html>
-	<head>
-		<title>News123 Portal de noticias</title>
-		<meta charset="utf-8">
+<head>
+    <title>News123 Portal de noticias</title>
+    <meta charset="utf-8">
 
-        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    
-        <!-- Le styles -->
-        <link href="/bootstrap.css" rel="stylesheet">
-        <style type="text/css">
-          body {
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body {
             padding-top: 60px;
-          }
-        </style>
-    
-        <!-- Le fav and touch icons -->
-        <link rel="shortcut icon" href="/images/favicon.ico">
-        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+        }
+    </style>
 
-	</head>
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
 
-	<body>
+</head>
 
+<body>
 
     <div class="topbar">
-      <div class="topbar-inner">
-        <div class="container-fluid">
-          <a class="brand" href="/">Blog de Noticias con Zend Framework</a>
-          <ul class="nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/categorias">Categorias</a></li>
-            <li><a href="/contact">Contactos</a></li>
-          </ul>
-          <?php /* <p class="pull-right">Logged in as <a href="#">username</a></p> */ ?>
+        <div class="topbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="/">Blog de Noticias con Zend Framework</a>
+                <ul class="nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/categorias">Categorias</a></li>
+                    <li><a href="/contact">Contactos</a></li>
+                </ul>
+                <?php /* <p class="pull-right">Logged in as <a href="#">username</a></p> */ ?>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="container-fluid">
-      <div class="sidebar">
-        <div class="well">
-          <h5>Sidebar</h5>
-          <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-          <h5>Sidebar</h5>
-          <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-          <h5>Sidebar</h5>
-          <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
+        <div class="sidebar">
+            <div class="well">
+                <h5>Sidebar</h5>
+                <ul>
+                    <li><a href="/posts/listar">Listar</a></li>
+                    <li><a href="/posts/agregar">Agregar</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+                <h5>Sidebar</h5>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+                <h5>Sidebar</h5>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="content">
-        
-        <?php echo $this->layout()->content; ?>
+        <div class="content">
 
-        <footer>
-          <p>&copy; Company 2011</p>
-        </footer>
-      </div>
+            <?php echo $this->layout()->content; ?>
+            <span class="label">Default</span>
+            <span class="label success">New</span>
+            <span class="label warning">Warning</span>
+            <span class="label important">Important</span>
+            <span class="label notice">Notice</span>
+            <footer>
+                <p>&copy; Company 2011</p>
+            </footer>
+        </div>
     </div>
 
-	</body>
+</body>
 
