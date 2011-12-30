@@ -34,6 +34,16 @@
                     <li class="active"><a href="/"><?php echo $this->translate->_('nav.home') ?></a></li>
                     <li><a href="/categorias"><?php echo $this->translate->_('nav.category') ?></a></li>
                     <li><a href="/contact"><?php echo $this->translate->_('nav.contact') ?></a></li>
+                    <?php
+                    $auth = Zend_Auth::getInstance();
+                    if ( $auth->hasIdentity()) :
+                    ?>
+                        <li>Usuario:<?php echo $auth->getIdentity() ?></li>
+                        <li> <a href="/usuario/logout">Logout</a>
+                    <?php else: ?>
+                        <li><a href="/usuario/login/">Login</a>
+                    <?php endif;?>
+                    
                 </ul>
 				<ul>
 					<li><a href="?lang=es"><img src="/imgs/es.png" width="18"/> </a></li>
@@ -47,27 +57,13 @@
     <div class="container-fluid">
         <div class="sidebar">
             <div class="well">
-                <h5>Sidebar</h5>
+                <h5> Categorias</h5>
                 <ul>
-                    <li><a href="/posts/listar">Listar</a></li>
-                    <li><a href="/posts/agregar">Agregar</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-                <h5>Sidebar</h5>
-                <ul>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-                <h5>Sidebar</h5>
-                <ul>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
+                <?php foreach ( $this->categories() as $cat ):?>
+                    <li><a href="/categorias/ver/id/<?php echo $cat->id?>">
+                            <?php echo $cat->name ?></a>
+                    </li>
+                <?php endforeach;?>
             </div>
         </div>
         <div class="content">
