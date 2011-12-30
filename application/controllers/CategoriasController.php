@@ -18,7 +18,6 @@ class CategoriasController extends Zend_Controller_Action
 
         $this->view->paginator = $paginator;
         
-        
     }
     
     public function verAction()

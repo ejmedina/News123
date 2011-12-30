@@ -68,7 +68,6 @@ class PostsController extends Zend_Controller_Action {
             return $this->_redirect('/usuarios/login');
         }
 
-
         $model = new Application_Model_Posts();
         $posts = $model->getAll();
 
